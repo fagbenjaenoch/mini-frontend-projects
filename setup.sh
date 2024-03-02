@@ -3,20 +3,19 @@
 # Get the current directory
 current_dir=$(pwd)
 
-# Loop through subdirectories
-for subdir in $(find . -type d  ! -path . -prune); do
+# Loop through subdirectories, excluding hidden directories and .git
+for subdir in $(find . -type d  ! -path . -prune -not -name ".git"); do
   # Change directory to the subdirectory
   cd "$subdir"
 
-  # Run pnpm install and capture the output
-  output=$(pnpm install 2>&1)
+  # Run pnpm install with non-buffering and capture the output line by line
+  pnpm install | tee /dev/tty
 
-  # Check if the installation was successful
+  # Check the exit code (after capturing output)
   if [[ $? -eq 0 ]]; then
     echo "Successfully installed packages in: $subdir"
   else
     echo "Failed to install packages in: $subdir"
-    echo "Error message: $output"
   fi
 
   # Go back to the previous directory
