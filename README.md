@@ -7,17 +7,20 @@ A repository for building out my curiosities on the frontend projects. It contai
 1. Clone this repository: 
 ```bash
 git clone git@github.com:fagbenjaenoch/mini-frontend-projects.git
-``` 
-2. Since this repository contains more than one project, it would be tedious to run `pnpm install` for every single project separately. Instead, you can use the following commands
+```
+2. Install pnpm from [here](https://pnpm.io/installation) or skip if you have it installed already.
+
+3. Since this repository contains more than one project, it would be tedious to run `pnpm install` for every single project separately. Instead, you can use the following commands
 - Windows:
 ```powershell 
-.\setup.ps
+.\setup.ps1
 ```
 - Linux and MacOS:
 ```bash
-./setup.sh
+chmod +x setup.sh
+setup.sh
 ```
 
-3. Navigate into the project of your choice and run `pnpm run dev` to start the dev server
+4. Navigate into the project of your choice and run `pnpm run dev` to start the dev server
 
-4. Go to [localhost](http://localhost:5173) in your browser
+5. Go to [localhost](http://localhost:5173) in your browser
