@@ -1,0 +1,12 @@
+{
+  "name": "mini-projects",
+  "version": "1.0.0",
+  "description": "This is a collection of mini projects for learning purposes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Enoch Fagbenja",
+  "license": "ISC"
+}
