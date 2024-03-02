@@ -10,7 +10,7 @@ git clone git@github.com:fagbenjaenoch/mini-frontend-projects.git
 ```
 2. Install pnpm from [here](https://pnpm.io/installation) or skip if you have it installed already.
 
-3. Since this repository contains more than one project, it would be tedious to run `pnpm install` for every single project separately. Instead, you can use the following commands
+3. Since this repository contains more than one project, it would be tedious to run `pnpm install` for every single project separately. Instead, you can use the following commands:
 - Windows:
 ```powershell 
 .\setup.ps1
