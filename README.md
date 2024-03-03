@@ -19,7 +19,6 @@ cd mini-frontend-projects
 ```
 - Linux and MacOS:
 ```bash
-chmod +x setup.sh
 setup.sh
 ```
 
