@@ -1,6 +1,6 @@
 # Mini Frontend Projects
 
-A repository for building out my curiosities on the frontend projects. It contains small projects that I build to learn and practice different technologies in the frontend.
+A repository for building out my curiosities on frontend projects. It contains small projects that I build to learn and practice different technologies in the frontend.
 
 ## Setup
 
