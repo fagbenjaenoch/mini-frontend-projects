@@ -4,11 +4,11 @@ import DesktopNav from "../molecules/DesktopNav";
 export default function Nav() {
 	return (
 		<div className="mb-4">
-			<div className="hidden sm:block py-6">
-				<Container>
+			<Container>
+				<div className="hidden sm:block py-6">
 					<DesktopNav />
-				</Container>
-			</div>
+				</div>
+			</Container>
 			<div className="block sm:hidden">
 				<DesktopNav />
 			</div>

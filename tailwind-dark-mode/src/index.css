@@ -99,3 +99,7 @@
   padding: 0;
   text-align: start;
 }
+
+* {
+  transition: all 100ms ease;
+}
