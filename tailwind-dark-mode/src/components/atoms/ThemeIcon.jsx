@@ -1,6 +1,5 @@
-import { Sun } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
 import useTheme from "../../hooks/useTheme";
-import { Moon } from "lucide-react";
 
 export default function ThemeIcon() {
 	const { theme, setTheme } = useTheme();
@@ -14,6 +13,7 @@ export default function ThemeIcon() {
 			onClick={handleThemeToggle}
 			onKeyUp={handleThemeToggle}
 			className="cursor-pointer dark:text-gray-200"
+			title={`Toggle ${theme === "light" ? "dark" : "light"} theme`}
 		>
 			{theme === "light" ? <Moon /> : <Sun />}
 		</div>

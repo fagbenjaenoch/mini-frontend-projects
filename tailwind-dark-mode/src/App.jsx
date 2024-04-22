@@ -1,8 +1,9 @@
-import { ArrowDown } from "lucide-react";
 import "./App.css";
+
+import { ArrowDownIcon } from "lucide-react";
+
 import Container from "./components/atoms/Container";
 import Nav from "./components/organisms/Nav";
-import { ArrowDownIcon } from "lucide-react";
 import ThemeProvider from "./providers/Theme";
 
 function App() {
