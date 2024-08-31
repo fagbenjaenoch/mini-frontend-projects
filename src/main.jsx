@@ -6,12 +6,17 @@ import {
 import App from './App.jsx'
 import './index.css'
 import ErrorPage from './error-page.jsx'
+import ExampleBlogPage from './components/pages/ExampleBlogPage.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     errorElement: <ErrorPage />
+  },
+  {
+    path: "/blog",
+    element: <ExampleBlogPage />
   }
 ])
 
