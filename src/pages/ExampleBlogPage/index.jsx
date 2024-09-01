@@ -1,8 +1,8 @@
 import { ArrowDownIcon } from "lucide-react";
 
 import ThemeProvider from "../../providers/Theme";
-import Nav from "../organisms/Nav";
-import Container from "../atoms/Container";
+import Nav from "../../components/organisms/Nav";
+import Container from "../../components/atoms/Container";
 
 function ExampleBlogPage() {
 	return (
