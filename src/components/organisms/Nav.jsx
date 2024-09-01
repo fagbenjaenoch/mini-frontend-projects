@@ -9,7 +9,7 @@ export default function Nav() {
 					<DesktopNav />
 				</div>
 			</Container>
-			<div className="block sm:hidden">
+			<div className="block sm:hidden px-4 py-6">
 				<DesktopNav />
 			</div>
 		</div>

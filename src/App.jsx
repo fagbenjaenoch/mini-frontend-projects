@@ -1,15 +1,14 @@
 import "./App.css";
-import { Github } from 'lucide-react'
 
 import ThemeProvider from "./providers/Theme";
 
 function App() {
 	return (
 		<ThemeProvider>
-			<div className="h-screen flex flex-col items-center justify-center gap-1">
-				<header className="flex flex-col items-center mb-5">
+			<div className="h-dvh px-8 flex flex-col items-center justify-center text-center gap-1">
+				<header className="flex flex-col items-center justify-center mb-5">
 					<h1 className="text-2xl font-bold">Mini Frontend Projects</h1>
-					<p>Collection of frontend ideas that comes across my mind</p>
+					<p>Collection of frontend projects that I find interesting</p>
 				</header>
 				<a href="/blog" className="underline">Example Blog Page</a>
 				<a href="" className="underline">Dropdown Component</a>

@@ -7,7 +7,7 @@ import Container from "../atoms/Container";
 function ExampleBlogPage() {
 	return (
 		<ThemeProvider>
-			<div className="font-clashDisplay h-screen relative bg-gradient-to-b from-slate-300 to-gray-100 dark:from-slate-950 dark:to-slate-800">
+			<div className="font-clashDisplay h-dvh relative bg-gradient-to-b from-slate-300 to-gray-100 dark:from-slate-950 dark:to-slate-800">
 				<Nav />
 				<Container>
 					<section className="mt-14 text-gray-950 dark:text-gray-200">
