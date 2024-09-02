@@ -1,7 +1,7 @@
 .content {
   height: 100dvh;
   display: grid;
-  place-items: center;
+  /* place-items: center; */
   padding: 2rem;
 }
 
@@ -35,17 +35,18 @@
 }
 
 .drawer {
-  background: #f6f6f6;
   padding: 1rem 1rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 300ms ease-in-out;
 }
 
 .drawer.open {
-  display: flex;
+  max-height: 300px;
 }
 
 .drawer-item {
