@@ -7,7 +7,6 @@ export default function Dropdown() {
 
 	const handleClick = () => {
 		setIsOpen((prev) => !prev);
-		console.log("first");
 	};
 
 	return (
