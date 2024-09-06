@@ -17,14 +17,17 @@ const router = createBrowserRouter([
 	{
 		path: "/blog",
 		element: <ExampleBlogPage />,
+		errorElement: <ErrorPage />,
 	},
 	{
 		path: "/dropdown",
 		element: <Dropdown />,
+		errorElement: <ErrorPage />,
 	},
 	{
 		path: "/multi-stage-dropdown",
 		element: <MultiStageDropdown />,
+		errorElement: <ErrorPage />,
 	},
 ]);
 
