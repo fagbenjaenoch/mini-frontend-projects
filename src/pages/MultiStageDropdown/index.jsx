@@ -1,3 +1,4 @@
+import { CSSTransition } from "react-transition-group";
 import { useState } from "react";
 import "./main.css";
 import {
@@ -11,10 +12,17 @@ const navIcons = [
 	{ icon: PlusIcon, key: "PlusIcon" },
 	{ icon: CloudLightningIcon, key: "BoltIcon" },
 	{ icon: CogIcon, key: "CogIcon" },
-	{ icon: ChevronDownIcon, key: "ChevronDownIcon", hasDropdown: true },
 ];
 
-function NavIcon({ children, Icon, hasDropdown }) {
+function NavIcon({ Icon }) {
+	return (
+		<div className="nav-icon">
+			<Icon />
+		</div>
+	);
+}
+
+function DropdownNavIcon({ Icon, children }) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const handleClick = () => {
@@ -25,7 +33,14 @@ function NavIcon({ children, Icon, hasDropdown }) {
 		<div className="nav-icon" onClick={handleClick} onKeyDown={handleClick}>
 			<Icon />
 
-			{isOpen && children}
+			<CSSTransition
+				in={isOpen}
+				className="dropdown"
+				timeout={200}
+				unmountOnExit
+			>
+				{children}
+			</CSSTransition>
 		</div>
 	);
 }
@@ -35,21 +50,12 @@ export default function MultiStageDropdown() {
 		<nav className="navbar">
 			<div>MultiStageDropdown</div>
 			<div className="nav-icons">
-				{navIcons.map((navIcon) =>
-					navIcon.hasDropdown ? (
-						<NavIcon
-							key={navIcon.key}
-							Icon={navIcon.icon}
-							hasDropdown={navIcon.hasDropdown}
-						>
-							<div className="dropdown">
-								<span>Hello World</span>
-							</div>
-						</NavIcon>
-					) : (
-						<NavIcon key={navIcon.key} Icon={navIcon.icon} />
-					),
-				)}
+				{navIcons.map((navIcon) => (
+					<NavIcon key={navIcon.key} Icon={navIcon.icon} />
+				))}
+				<DropdownNavIcon Icon={ChevronDownIcon}>
+					<div className="dropdown-menu">Hello World</div>
+				</DropdownNavIcon>
 			</div>
 		</nav>
 	);

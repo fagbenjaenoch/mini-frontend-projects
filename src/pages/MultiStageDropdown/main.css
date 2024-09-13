@@ -34,4 +34,30 @@
   background: #292929;
   border-radius: 1rem;
   padding: 1rem 2rem;
+  transition: all 150ms ease-in-out;
+  opacity: 0;
+  transform: translateY(-10%);
 }
+
+.dropdown.enter-done {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.dropdown.exit {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.dropdown.exit-active {
+  opacity: 0;
+  transform: translateY(-10%);
+}
+
+.dropdown-item-enter {}
+
+.dropdown-item-enter-active {}
+
+.dropdown-item-exit {}
+
+.dropdown-item-exit-active {}
