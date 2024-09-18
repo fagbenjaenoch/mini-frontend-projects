@@ -24,28 +24,15 @@ function NavIcon({ Icon }) {
 }
 
 function DropdownNavIcon({ Icon, children }) {
-	const ref = useRef(null);
+	const dropdownRef = useRef(null);
 	const [isOpen, setIsOpen] = useState(false);
-
-	// useEffect(() => {
-	// 	document.addEventListener("click", (e) => {
-	// 		e.target.className !== ref.current.className ||  && setIsOpen(false);
-	// 		console.log(e.target.className);
-	// 	});
-
-	// 	return () => {
-	// 		document.removeEventListener("click", (e) => {
-	// 			e.target.className !== ref.current.className && setIsOpen(false);
-	// 		});
-	// 	};
-	// });
 
 	const handleClick = () => {
 		setIsOpen((prev) => !prev);
 	};
 
 	return (
-		<div className="nav-icon" ref={ref}>
+		<div className="nav-icon" ref={dropdownRef}>
 			<Icon onClick={handleClick} />
 
 			<CSSTransition
@@ -62,7 +49,7 @@ function DropdownNavIcon({ Icon, children }) {
 
 function DropdownMenu() {
 	const [activeSubmenu, setActiveSubmenu] = useState("main");
-	const [menuHeight, setMenuHeight] = useState(0);
+	const [menuHeight, setMenuHeight] = useState(null);
 
 	const calculateHeight = (el) => {
 		setMenuHeight(el.offsetHeight);
@@ -85,24 +72,24 @@ function DropdownMenu() {
 	return (
 		<div style={{ height: menuHeight }}>
 			<CSSTransition
-				className="dropdown-menu"
+				classNames="menu-primary"
 				in={activeSubmenu === "main"}
-				timeout={200}
+				timeout={500}
 				onEnter={calculateHeight}
 				unmountOnExit
 			>
-				<div>
+				<div className="menu">
 					<DropdownItem label="Settings" goToMenu={"settings"} />
 				</div>
 			</CSSTransition>
 			<CSSTransition
-				className="dropdown-menu-secondary"
+				classNames="menu-secondary"
 				in={activeSubmenu === "settings"}
 				onEnter={calculateHeight}
-				timeout={200}
+				timeout={500}
 				unmountOnExit
 			>
-				<div>
+				<div className="menu">
 					<DropdownItem leftIcon={<ChevronLeft />} goToMenu={"main"} />
 					<DropdownItem label={"Personal"} />
 					<DropdownItem label={"Security"} />
