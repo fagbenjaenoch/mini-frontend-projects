@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App.jsx";
+
 import "./index.css";
+import App from "./App.jsx";
 import ErrorPage from "./ErrorPage.jsx";
 import ExampleBlogPage from "./pages/ExampleBlogPage/index.jsx";
 import Dropdown from "./pages/Dropdown/index.jsx";
 import MultiStageDropdown from "./pages/MultiStageDropdown/index.jsx";
+import MajorHoldCoinClone from "./pages/MajorHoldCoinClone/index.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -27,6 +29,11 @@ const router = createBrowserRouter([
 	{
 		path: "/multi-stage-dropdown",
 		element: <MultiStageDropdown />,
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: "/major-hold-coin-clone",
+		element: <MajorHoldCoinClone />,
 		errorElement: <ErrorPage />,
 	},
 ]);

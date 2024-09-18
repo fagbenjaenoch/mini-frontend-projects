@@ -7,12 +7,14 @@ import {
 	ChevronDownIcon,
 	PlusIcon,
 	ChevronLeft,
+	MessageCircleIcon,
+	BellIcon
 } from "lucide-react";
 
 const navIcons = [
 	{ icon: PlusIcon, key: "PlusIcon" },
-	{ icon: CloudLightningIcon, key: "BoltIcon" },
-	{ icon: CogIcon, key: "CogIcon" },
+	{ icon: BellIcon, key: "PlusIcon" },
+	{ icon: MessageCircleIcon, key: "BoltIcon" },
 ];
 
 function NavIcon({ Icon }) {
