@@ -16,8 +16,8 @@ const links = [
 		text: "Multi Stage Dropdown component",
 	},
 	{
-		href: "/major-hold-coin-clone",
-		text: "Major Hold Coin clone",
+		href: "/example-landing-page",
+		text: "Example Landing Page",
 	},
 ];
 

@@ -8,7 +8,7 @@ import ErrorPage from "./ErrorPage.jsx";
 import ExampleBlogPage from "./pages/ExampleBlogPage/index.jsx";
 import Dropdown from "./pages/Dropdown/index.jsx";
 import MultiStageDropdown from "./pages/MultiStageDropdown/index.jsx";
-import MajorHoldCoinClone from "./pages/MajorHoldCoinClone/index.jsx";
+import ExampleLandingPage from "./pages/ExampleLandingPage/index.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -32,8 +32,8 @@ const router = createBrowserRouter([
 		errorElement: <ErrorPage />,
 	},
 	{
-		path: "/major-hold-coin-clone",
-		element: <MajorHoldCoinClone />,
+		path: "/example-landing-page",
+		element: <ExampleLandingPage />,
 		errorElement: <ErrorPage />,
 	},
 ]);
