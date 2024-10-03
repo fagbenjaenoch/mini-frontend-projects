@@ -3,12 +3,17 @@ import HeroImg from "./public/assets/hero-img.gif";
 import IllustrationOne from "./public/assets/illustration-1.gif";
 import IllustrationTwo from "./public/assets/illustration-2.gif";
 import { MenuIcon } from "lucide-react";
+import { ExternalLinkIcon } from "lucide-react";
+
+function BrandIcon() {
+	return <span className="brand-icon">Zephtor</span>;
+}
 
 export default function ExampleLandingPage() {
 	return (
 		<div className="body">
 			<nav>
-				<span className="brand-icon">Zephtor</span>
+				<BrandIcon />
 				<MenuIcon size={32} />
 			</nav>
 
@@ -66,6 +71,12 @@ export default function ExampleLandingPage() {
 				</div>
 			</div>
 			<div className="section-with-img">
+				<div className="section-img">
+					<img
+						src={IllustrationOne}
+						alt="An illustration of a woman analyzing graphs"
+					/>
+				</div>
 				<div className="section-content">
 					<h2>Customization and integration</h2>
 					<p>
@@ -78,14 +89,14 @@ export default function ExampleLandingPage() {
 						Learn more
 					</button>
 				</div>
-				<div className="section-img">
-					<img
-						src={IllustrationOne}
-						alt="An illustration of a woman analyzing graphs"
-					/>
-				</div>
 			</div>
 			<div className="section-with-img reverse">
+				<div className="section-img">
+					<img
+						src={IllustrationTwo}
+						alt="An illustration of a collection of support staffs"
+					/>
+				</div>
 				<div className="section-content">
 					<h2>Dedicated support</h2>
 					<p>
@@ -97,14 +108,8 @@ export default function ExampleLandingPage() {
 						Learn more
 					</button>
 				</div>
-				<div className="section-img">
-					<img
-						src={IllustrationTwo}
-						alt="An illustration of a collection of support staffs"
-					/>
-				</div>
 			</div>
-			<div className="section">
+			<div className="section last">
 				<div className="section-header">
 					<h2>Discover what sets Zephtor apart</h2>
 					<p>Our suite of SaaS solutions is packed with powerful features.</p>
@@ -171,12 +176,12 @@ export default function ExampleLandingPage() {
 
 			<footer>
 				<div className="footer-header">
-					<span>Zephtor</span>
+					<BrandIcon />
 					<p>Your digital transformation partner.</p>
 				</div>
 				<div className="footer-content">
 					<div className="footer-section">
-						<div className="h3">Quick links</div>
+						<h5>Quick links</h5>
 						<div className="flex-column">
 							<a href="#">Home</a>
 							<a href="#">Features</a>
@@ -186,7 +191,7 @@ export default function ExampleLandingPage() {
 						</div>
 					</div>
 					<div className="footer-section">
-						<div className="h3">Legal</div>
+						<h5>Legal</h5>
 						<div className="flex-column">
 							<a href="#">Privacy policy</a>
 							<a href="#">Terms of service</a>
@@ -194,13 +199,34 @@ export default function ExampleLandingPage() {
 						</div>
 					</div>
 					<div className="footer-section">
-						<div className="h3">Stay Connected</div>
+						<h5>Stay Connected</h5>
 						<div className="flex-column">
 							<a href="#">Linkedin</a>
 							<a href="#">Facebook</a>
 							<a href="#">X (Formerly Twitter)</a>
 						</div>
 					</div>
+				</div>
+
+				<div className="copyright-section">
+					<small>
+						Made by{" "}
+						<a
+							href="https://github.com/fagbenjaenoch"
+							className="easter-egg"
+							title="Stay Hungry"
+						>
+							Enoch
+							<ExternalLinkIcon size={14} />
+						</a>
+					</small>
+					<small>
+						Inspired by{" "}
+						<a target="_blank" href="https://typescale.com">
+							Typescale
+							<ExternalLinkIcon size={14} />
+						</a>
+					</small>
 				</div>
 			</footer>
 		</div>
