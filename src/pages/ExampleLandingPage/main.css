@@ -11,6 +11,7 @@
   --text-size-3xl: 2.07rem;
   --text-size-4xl: 2.49rem;
   --text-size-5xl: 2.99rem;
+  --container-padding: 0 1rem;
 }
 
 .body {
@@ -40,7 +41,6 @@ h5 {
 
 a {
   font-size: var(--text-size-sm);
-  text-decoration: underline;
 }
 
 a>* {
@@ -83,16 +83,17 @@ nav {
 
 .hero-section {
   margin-top: 4rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1rem;
-  padding: 0 1rem;
+  padding: var(--container-padding);
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  align-items: flex-start;
 }
 
 .section {
@@ -146,6 +147,10 @@ footer {
   background: #ece9e9;
 }
 
+footer a {
+  text-decoration: underline;
+}
+
 .footer-header {
   margin-bottom: 2rem;
 }
@@ -169,4 +174,116 @@ footer {
   display: flex;
   flex-direction: column;
   color: #8c8c8c;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --container-padding: 0 4rem;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  nav {
+    padding: 2rem 4rem;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .hero-section {
+    grid-template-columns: 30rem 1fr;
+    align-items: end;
+  }
+
+  .hero-content {
+    padding-bottom: 20vh;
+  }
+
+  .hero-img {
+    justify-self: center;
+  }
+
+  .section {
+    margin-top: 15rem;
+    padding: 0 4rem;
+  }
+
+  .section-header {
+    margin-bottom: 6rem;
+  }
+
+  .section-content {
+    justify-content: center;
+    grid-template-columns: repeat(3, 300px);
+  }
+
+  .section-with-img {
+    padding: 0 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+    flex-direction: row-reverse;
+    gap: 8rem;
+  }
+
+  .section-with-img.reverse {
+    flex-direction: row;
+  }
+
+  .section-with-img>* {
+    flex-basis: 50%;
+  }
+
+  .section-with-img>.section-content {
+    flex-basis: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .section.last {
+    margin: 8rem 0;
+    padding: 0 4rem;
+  }
+
+  .section.last>.section-content {
+    grid-template-columns: repeat(4, 1fr);
+    font-size: var(--text-size-sm);
+  }
+
+  .section.last .feature-header {
+    font-size: var(--text-size-lg);
+  }
+
+  footer {
+    padding: 8rem 4rem 4rem;
+  }
+
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+  }
+
+  .footer-content {
+    justify-self: end;
+    display: flex;
+    gap: 4rem;
+  }
+
+  .copyright-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

@@ -14,7 +14,23 @@ export default function ExampleLandingPage() {
 		<div className="body">
 			<nav>
 				<BrandIcon />
-				<MenuIcon size={32} />
+
+				<div className="nav-links">
+					<a href="#">Home</a>
+					<a href="#">Features</a>
+					<a href="#">Pricing</a>
+					<a href="#">About Us</a>
+					<a href="#">Contact</a>
+				</div>
+
+				<div className="buttons">
+					<button type="button" className="cta-btn">
+						Sign up
+					</button>
+					<a href="#">Login</a>
+				</div>
+
+				<MenuIcon className="mobile-only" size={32} />
 			</nav>
 
 			<div className="hero-section">
@@ -175,35 +191,37 @@ export default function ExampleLandingPage() {
 			</div>
 
 			<footer>
-				<div className="footer-header">
-					<BrandIcon />
-					<p>Your digital transformation partner.</p>
-				</div>
-				<div className="footer-content">
-					<div className="footer-section">
-						<h5>Quick links</h5>
-						<div className="flex-column">
-							<a href="#">Home</a>
-							<a href="#">Features</a>
-							<a href="#">Pricing</a>
-							<a href="#">About us</a>
-							<a href="#">Contact us</a>
-						</div>
+				<div className="footer-wrapper">
+					<div className="footer-header">
+						<BrandIcon />
+						<p>Your digital transformation partner.</p>
 					</div>
-					<div className="footer-section">
-						<h5>Legal</h5>
-						<div className="flex-column">
-							<a href="#">Privacy policy</a>
-							<a href="#">Terms of service</a>
-							<a href="#">Cookie policy</a>
+					<div className="footer-content">
+						<div className="footer-section">
+							<h5>Quick links</h5>
+							<div className="flex-column">
+								<a href="#">Home</a>
+								<a href="#">Features</a>
+								<a href="#">Pricing</a>
+								<a href="#">About us</a>
+								<a href="#">Contact us</a>
+							</div>
 						</div>
-					</div>
-					<div className="footer-section">
-						<h5>Stay Connected</h5>
-						<div className="flex-column">
-							<a href="#">Linkedin</a>
-							<a href="#">Facebook</a>
-							<a href="#">X (Formerly Twitter)</a>
+						<div className="footer-section">
+							<h5>Legal</h5>
+							<div className="flex-column">
+								<a href="#">Privacy policy</a>
+								<a href="#">Terms of service</a>
+								<a href="#">Cookie policy</a>
+							</div>
+						</div>
+						<div className="footer-section">
+							<h5>Stay Connected</h5>
+							<div className="flex-column">
+								<a href="#">Linkedin</a>
+								<a href="#">Facebook</a>
+								<a href="#">X (Formerly Twitter)</a>
+							</div>
 						</div>
 					</div>
 				</div>
