@@ -125,6 +125,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+  padding: 0 4rem;
 }
 
 .feature-header {
