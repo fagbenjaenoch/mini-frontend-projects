@@ -15,7 +15,7 @@ export default function ExampleLandingPage() {
 			<nav>
 				<BrandIcon />
 
-				<div className="nav-links">
+				<div className="nav-links desktop-only">
 					<a href="#">Home</a>
 					<a href="#">Features</a>
 					<a href="#">Pricing</a>
@@ -23,7 +23,7 @@ export default function ExampleLandingPage() {
 					<a href="#">Contact</a>
 				</div>
 
-				<div className="buttons">
+				<div className="buttons desktop-only">
 					<button type="button" className="cta-btn">
 						Sign up
 					</button>
